@@ -11,3 +11,10 @@
 * The items prop in the WrappedListComponent component is declared with PropTypes.array, but the correct syntax is PropTypes.arrayOf(PropTypes.shape()). Also, the shape of each item should include the text property with the isRequired validator.
 
 3.To fix the issue, code can be modified , and the modified code is there in **Code** file.
+ In the modified code:
+
+   * The SingleListItem component now uses a callback function to handle the click event, and the isSelected prop is correctly passed as a boolean.
+
+   * The List component now sets the selectedIndex state variable to null whenever the items prop changes. Also, the handleClick function now toggles the selection of an item by checking whether the clicked index is already selected or not.
+
+   * The items prop in the List component is now declared with the correct arrayOf syntax, and each item is required to have a text property. Also, the key prop is added to each SingleListItem to improve rendering performance.

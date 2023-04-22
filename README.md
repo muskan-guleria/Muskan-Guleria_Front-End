@@ -11,7 +11,8 @@
 * The items prop in the WrappedListComponent component is declared with PropTypes.array, but the correct syntax is PropTypes.arrayOf(PropTypes.shape()). Also, the shape of each item should include the text property with the isRequired validator.
 
 3.To fix the issue, code can be modified , and the modified code is there in **main** file.
- import React, { useState, useEffect, memo } from 'react';
+
+import React, { useState, useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 
 // Single List Item

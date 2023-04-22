@@ -10,7 +10,7 @@
  
 * The items prop in the WrappedListComponent component is declared with PropTypes.array, but the correct syntax is PropTypes.arrayOf(PropTypes.shape()). Also, the shape of each item should include the text property with the isRequired validator.
 
-3.To fix the issue, code can be modified , and the modified code is there in **Code** file.
+3.To fix the issue, code can be modified and the modified code is there in **Code** file.
  
  In the modified code:
 

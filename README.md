@@ -13,9 +13,7 @@
 3.To fix the issue, code can be modified , and the modified code is there in **main** file.
 
 import React, { useState, useEffect, memo } from 'react';
-
 import PropTypes from 'prop-types';
-
 
 // Single List Item
 const SingleListItem = memo(({ index, isSelected, onClickHandler, text }) => {
@@ -29,7 +27,6 @@ onClick={onClickHandler}
 );
 });
 
-
 SingleListItem.propTypes = {
 index: PropTypes.number.isRequired,
 isSelected: PropTypes.bool.isRequired,
@@ -37,21 +34,17 @@ onClickHandler: PropTypes.func.isRequired,
 text: PropTypes.string.isRequired,
 };
 
-
 // List Component
 const List = memo(({ items }) => {
 const [selectedIndex, setSelectedIndex] = useState(null);
-
 
 useEffect(() => {
 setSelectedIndex(null);
 }, [items]);
 
-
 const handleClick = index => {
 setSelectedIndex(index);
 };
-
 
 return (
 <ul style={{ textAlign: 'left' }}>
@@ -68,7 +61,6 @@ isSelected={selectedIndex === index}
 );
 });
 
-
 List.propTypes = {
 items: PropTypes.arrayOf(
 PropTypes.shape({
@@ -76,7 +68,6 @@ text: PropTypes.string.isRequired,
 })
 ).isRequired,
 };
-
 
 // Added demo data for testing
 const demoItems = [
@@ -86,7 +77,6 @@ const demoItems = [
 { text: 'Item 4' },
 { text: 'Item 5' },
 ];
-
 
 export default function App() {
 return <List items={demoItems} />;
